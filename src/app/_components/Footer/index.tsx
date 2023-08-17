@@ -1,6 +1,7 @@
 import { IconBrandFacebook, IconBrandInstagram } from "@tabler/icons-react";
 import React from "react";
 import Logo from "../Hero/Logo";
+import Contact from "../Contact";
 
 export default function Footer() {
   const footerNavs = [
@@ -32,20 +33,21 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="text-gray-500 bg-white px-4 py-8 max-w-screen-xl mx-auto md:px-8">
-      <div className="max-w-lg sm:mx-auto sm:text-center">
+    <footer className="bg-primary px-4 py-8 mt-20 md:px-8 flex flex-col gap-16">
+      <Contact />
+      {/* <div className="max-w-lg sm:mx-auto sm:text-center">
         <Logo className="mx-auto" />
 
-        <p className="leading-relaxed mt-2 text-[15px]">
+                <p className="leading-relaxed mt-2 text-[15px]">
           Somos uma empresa dedicada a revolucionar a forma como os automóveis
           são lavados, adotando uma abordagem ecologicamente consciente e
           altamente eficaz. A nossa paixão pela sustentabilidade impulsiona-nos
           a fornecer serviços de lavagem automóvel que não só proporcionam
           resultados excecionais, como também contribuem para a preservação do
           ambiente.
-        </p>
+        </p> 
       </div>
-      {/*       <ul className="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
+           <ul className="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
         {footerNavs.map((item, idx) => (
           <li key={idx} className=" hover:text-gray-800">
             <a key={idx} href={item.href}>
@@ -53,8 +55,8 @@ export default function Footer() {
             </a>
           </li>
         ))}
-      </ul> */}
-      <div className="mt-8 items-center justify-between sm:flex">
+      </ul>  */}
+      <div className="w-full text-gray-200 items-center justify-between max-w-screen-xl mx-auto sm:flex">
         <div className="mt-4 sm:mt-0">
           &copy; {new Date().getFullYear()} Blb Lavagem Ecológica
         </div>

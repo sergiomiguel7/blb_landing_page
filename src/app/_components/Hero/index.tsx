@@ -69,8 +69,9 @@ export default function HeroSection() {
               width={420}
               height={90}
               src={HeroCover}
+              priority
               className="rounded-lg"
-              alt=""
+              alt="video-thumbnail"
             />
             <Link
               className="absolute w-16 h-16 rounded-full inset-0 m-auto duration-150 bg-primary hover:bg-green-800  ring-offset-2 focus:ring text-white"

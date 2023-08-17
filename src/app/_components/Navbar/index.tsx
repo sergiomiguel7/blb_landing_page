@@ -13,6 +13,7 @@ export default function Navbar() {
     { title: "Características", path: "#features" },
     { title: "O que dizem sobre nós", path: "#testimonials" },
     { title: "FAQ", path: "#faq" },
+    { title: "Contactos", path: "#contacts" },
   ];
 
   return (
