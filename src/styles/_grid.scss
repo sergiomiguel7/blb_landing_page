@@ -1,0 +1,13 @@
+.layout-width {
+  @include desktop {
+    max-width: rem2(1170);
+  }
+
+  @include tablet {
+    max-width: rem2(960);
+  }
+
+  @include mobile {
+    max-width: rem2(960);
+  }
+}

@@ -1,0 +1,21 @@
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+// Small tablets (portrait view)
+
+@mixin tablet {
+  @media (min-width: 768px) and (max-width: 1536px) {
+    @content;
+  }
+}
+
+// Tablets and small desktops
+
+@mixin desktop {
+  @media (min-width: 1536px) {
+    @content;
+  }
+}
