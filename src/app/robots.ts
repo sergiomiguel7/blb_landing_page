@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-export const WEBSITE = "https:/blb-eco.pt";
+export const WEBSITE = "https://blb-eco.pt";
 
 export default function robots(): MetadataRoute.Robots {
   return {
