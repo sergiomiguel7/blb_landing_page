@@ -3,37 +3,17 @@ import { Inter } from "next/font/google";
 import "../styles/globals.scss";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
+import { generateBaseMetadata, generateSchemaOrg } from "./_shared/metadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Blb Lavagem Ecológica",
-  description: `Somos uma empresa dedicada a revolucionar a forma como os automóveis
-  são lavados, adotando uma abordagem ecologicamente consciente e
-  altamente eficaz. A nossa paixão pela sustentabilidade impulsiona-nos
-  a fornecer serviços de lavagem automóvel que não só proporcionam
-  resultados excecionais, como também contribuem para a preservação do
-  ambiente.`,
-  icons: [
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "32x32",
-      url: "/favicon/favicon-32x32.png",
-    },
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "16x16",
-      url: "/favicon/favicon-16x16.png",
-    },
-    {
-      rel: "apple-touch-icon",
-      sizes: "180x180",
-      url: "/favicon/apple-touch-icon.png",
-    },
-  ],
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return generateBaseMetadata({
+    title: "Blb Lavagem Ecológica",
+    description: `Descubra a revolução na lavagem automóvel! Sustentabilidade aliada a resultados excecionais. Conheça a nossa abordagem ecológica para um carro impecável.`,
+    multimedia: [],
+  });
+}
 
 export default function RootLayout({
   children,
@@ -43,6 +23,12 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body className={inter.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateSchemaOrg()),
+          }}
+        />
         <Navbar />
         {children}
         <Footer />

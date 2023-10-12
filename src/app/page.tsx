@@ -6,7 +6,6 @@ import Testimonials from "./_components/Testimonials";
 
 import Faq from "./_components/Faq";
 import ModalsWrapper from "./_components/Modal/variants";
-import Contact from "./_components/Contact";
 
 export default function Home() {
   return (
