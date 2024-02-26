@@ -55,6 +55,7 @@ export default function HeroSection() {
           </p>
           <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0 xl:justify-start">
             <Link
+              prefetch
               href="?reservation=true"
               className="flex items-center justify-center gap-x-2 py-2 px-4 text-white font-medium bg-primary hover:bg-green-800  duration-150  active:bg-gray-900 rounded-lg md:inline-flex"
             >

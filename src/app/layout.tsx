@@ -5,6 +5,7 @@ import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
 import { generateBaseMetadata, generateSchemaOrg } from "./_shared/metadata";
 import Script from "next/script";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,20 +24,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=AW-11402325724"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-11402325724');
-        `}
-      </Script>
       <body className={inter.className}>
+        <GoogleTagManager gtmId="GTM-PJS2QCVD" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

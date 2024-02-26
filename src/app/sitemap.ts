@@ -25,7 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       },
     ];
 
-    return [...staticRoutes];
+    return staticRoutes;
   } catch (error) {
     console.error("Error generating sitemap:", error);
     throw error; // You might want to handle this error more appropriately based on your use case
