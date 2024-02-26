@@ -7,6 +7,7 @@ import {
   IconUserCheck,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export default function HeroSection() {
   const features = [
@@ -57,6 +58,9 @@ export default function HeroSection() {
             <Link
               prefetch
               href="?reservation=true"
+              onClick={() => {
+                sendGTMEvent({ event: "reservationClicked" });
+              }}
               className="flex items-center justify-center gap-x-2 py-2 px-4 text-white font-medium bg-primary hover:bg-green-800  duration-150  active:bg-gray-900 rounded-lg md:inline-flex"
             >
               Marque já
