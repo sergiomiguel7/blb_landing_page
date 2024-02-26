@@ -1,13 +1,12 @@
-import Image from "next/image";
-import React from "react";
-import HeroCover from "../../../assets/hero_cover.jpeg";
 import {
   IconArrowRight,
   IconPlayerPlayFilled,
   IconUserCheck,
 } from "@tabler/icons-react";
+import Image from "next/image";
 import Link from "next/link";
-import { sendGTMEvent } from "@next/third-parties/google";
+import HeroCover from "../../../assets/hero_cover.jpeg";
+import { Button } from "../Button";
 
 export default function HeroSection() {
   const features = [
@@ -55,15 +54,15 @@ export default function HeroSection() {
             Lavagem Ecológica, Sem Uso de Água, Diretamente em Sua Casa
           </p>
           <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0 xl:justify-start">
-            <Link
-              prefetch
-              href="?reservation=true"
-              onClick={() => {
-                sendGTMEvent({ event: "reservationClicked" });
-              }}
-              className="flex items-center justify-center gap-x-2 py-2 px-4 text-white font-medium bg-primary hover:bg-green-800  duration-150  active:bg-gray-900 rounded-lg md:inline-flex"
-            >
-              Marque já
+            <Link prefetch href="?reservation=true">
+              <Button
+                event={{
+                  event: "reservationClicked",
+                }}
+                className="flex items-center justify-center gap-x-2 py-2 px-4 text-white font-medium bg-primary hover:bg-green-800  duration-150  active:bg-gray-900 rounded-lg md:inline-flex"
+              >
+                Marque já
+              </Button>
               <IconArrowRight width={24} height={24} color="white" />
             </Link>
           </div>

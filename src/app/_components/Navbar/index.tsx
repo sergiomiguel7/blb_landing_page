@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Logo from "../Hero/Logo";
 import { sendGTMEvent } from "@next/third-parties/google";
+import { Button } from "../Button";
 
 export default function Navbar() {
   const [state, setState] = useState(false);
@@ -74,14 +75,15 @@ export default function Navbar() {
           </ul>
         </div>
         <div className="hidden md:inline-block">
-          <Link
-            href={"?reservation=true"}
-            onClick={() => {
-              sendGTMEvent({ event: "reservationClicked" });
-            }}
-            className="py-3 px-4 text-white bg-primary hover:bg-green-800 rounded-md shadow"
-          >
-            Marque já
+          <Link href={"?reservation=true"}>
+            <Button
+              event={{
+                event: "reservationClicked",
+              }}
+              className="py-3 px-4 text-white bg-primary hover:bg-green-800 rounded-md shadow"
+            >
+              Marque já
+            </Button>
           </Link>
         </div>
       </div>
