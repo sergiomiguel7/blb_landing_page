@@ -14,8 +14,6 @@ export default function Home() {
       <HeroSection />
       <Features />
       <Testimonials />
-      {/*       <Stats />
-       */}
       <Faq />
     </div>
   );

@@ -1,6 +1,6 @@
 "use client";
-import React, { useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import { useMemo } from "react";
 import Modal from "..";
 
 export default function Video() {

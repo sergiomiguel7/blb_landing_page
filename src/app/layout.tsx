@@ -1,11 +1,10 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.scss";
-import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
+import Navbar from "./_components/Navbar";
 import { generateBaseMetadata, generateSchemaOrg } from "./_shared/metadata";
-import Script from "next/script";
-import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 

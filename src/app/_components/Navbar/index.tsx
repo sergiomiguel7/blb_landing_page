@@ -1,9 +1,7 @@
 "use client";
-import Image from "next/image";
-import React, { useState } from "react";
-import Logo from "../Hero/Logo";
-import Reservation from "../Modal/variants/Reservation";
 import Link from "next/link";
+import { useState } from "react";
+import Logo from "../Hero/Logo";
 
 export default function Navbar() {
   const [state, setState] = useState(false);

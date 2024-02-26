@@ -1,12 +1,14 @@
-import React, { Fragment } from "react";
+import React, { Fragment, Suspense } from "react";
 import Reservation from "./Reservation";
 import Video from "./Video";
 
 export default function ModalsWrapper() {
   return (
-    <Fragment>
-      <Reservation />
-      <Video />
-    </Fragment>
+    <Suspense>
+      <Fragment>
+        <Reservation />
+        <Video />
+      </Fragment>
+    </Suspense>
   );
 }
